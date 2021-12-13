@@ -3,4 +3,5 @@ let adjectives = ['generous', 'funny', 'weird', 'cool']
 function createPhrase(){
     return `${subject[Math.floor(Math.random() * 4)]} are/is ${adjectives[Math.floor(Math.random() * 4)]}`
 }
+// This is new
 console.log(createPhrase())
