@@ -1,4 +1,5 @@
 let salaries = [134000, 164000, 192000, 250000]
+let stockSalaries = [108000, 240000, 405000, 594000]
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -30,7 +31,7 @@ function calculateGrowth(initial, yearlyReturn, salaries, years){
         }
         let currentMonthFinal = (currentCap * monthlyReturn) + ((salaries[salaryIndex] / 36))
         currentCap = currentMonthFinal
-        if (currentCap >= 1000000000 && x === 0){
+        if (currentCap >= 1250000000 && x === 0){
             console.log(`You are a billionaire!! Age: ${25 + currentYear}, year ${currentYear}`)
             x = 1
         }
@@ -38,4 +39,7 @@ function calculateGrowth(initial, yearlyReturn, salaries, years){
     console.log(`Final cap: ${formatter.format(currentCap)}`)
 }
 
-calculateGrowth(10000, 0.5, salaries, 21)
+calculateGrowth(0, 0.5, salaries, 21)
+console.log(' ')
+calculateGrowth(0, 0.35, stockSalaries, 21)
+
